@@ -30,7 +30,7 @@ def generate_data():
             time.sleep(global_vals.data_produce_duration)
     
     #### Creating a thread for each users
-    thread_list = [threading.Thread(target=work, args=(i,)) for i in range(len(users)]
+    thread_list = [threading.Thread(target=work, args=(i,)) for i in range(len(users))]
     for thread in thread_list:
         thread.setDaemon(True)
         thread.start()
